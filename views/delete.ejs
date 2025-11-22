@@ -3,31 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Borrar Usuario</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Borrar</h1>
-    <% users.forEach(user =>{ %>
-    <table>
+    <main class="bsod container">
+        <h1 class="neg title"><span class="bg">Borrar</span></h1>
+        <table>
         <tr>
             <th>ID</th>
             <th>Nombre</th>
             <th>Correo</th>
         </tr>
+        <% users.forEach(user =>{ %>
         <tr>
             <td><%= user.id %>  </td>
             <td><%= user.name %></td>
             <td><%= user.email %></td>
         </tr>
-    </table>
-    <!-- agregar usuario -->
-    <h1>Estas seguro que quieres borrar este usuario?</h1>
-    <table>
-    <tr>
-        <th><a href="/deletefrfr?id=<%= user.id %>">Eliminar</a></th>
-        <th><a href="/">Cancelar</a></th>
-    </tr>
-    </table>
-    <% }); %>
+        
+        </table>
+        <br>
+        
+        <!-- agregar usuario -->
+        <h1 class="redneg title"><span class="bg">Estas seguro que quieres borrar a este usuario?</span></h1>
+        <br>
+        <table style="border: none; padding: 0px;">
+        <tr>
+            <th style="border: none; font-size: x-large;"><a class="linkcoolred" href="/deletefrfr?id=<%= user.id %>">Eliminar</a></th>
+            <th style="border: none; font-size: x-large;"><a class="linkcool" href="/">Cancelar</a></th>
+        </tr>
+        </table>
+        <% }); %>
+    </main>
+    
 </body>
 </html>

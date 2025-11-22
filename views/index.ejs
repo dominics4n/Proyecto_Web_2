@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Spanish Sahara</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Lista de usuarios</h1>
-    <table>
+    <main class="bsod container">
+        <h1 class="neg title"><span class="bg">Lista de usuarios</span></h1>
+        <table>
         <tr>
             <th>ID</th>
             <th>Nombre</th>
@@ -20,20 +22,46 @@
             <td><%= user.name %></td>
             <td><%= user.email %></td>
             <td>
-                <a href="/edit?id=<%= user.id %>">Editar</a>
-                <a href="/delete?id=<%= user.id %>">Eliminar</a>
+                <a class="linkcool" href="/edit?id=<%= user.id %>" class="link">Editar</a>&nbsp;
+                |&nbsp;<a class="linkcool" href="/delete?id=<%= user.id %>" class="link">Eliminar</a>
             </td>
         </tr>
         <% }); %>
-    </table>
-    <!-- agregar usuario -->
-     <form action="/add" method="post">
-            <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
-            <br>
-            <label for="email">Correo</label>
-                <input type="email" name="email" id="email" required>
-            <button type="submit">Agregar</button> 
-     </form>
+        </table>
+        <br>
+        
+        <!-- agregar usuario -->
+        <form action="/add" method="post">
+         <table style="border: none; width: 60%;">
+        <tr>
+            <td style="border: none; padding: 0px;">
+                <label for="name">Nombre:</label>
+                <div style="text-align: center;">
+                    <input style="width: 100%;" type="text" id="name" name="name" required>
+                </div>
+                
+            </td>
+        </tr>
+        <tr>
+            <td style="border: none; padding: 0px;">
+                <label for="email">Correo:</label>
+                <div style="text-align: center;">
+                    <input style="width: 100%;"type="email" name="email" id="email" required>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            
+            <td style="border: none; padding: 0px;">
+                <br>
+                    <button class="buttoncosa" type="submit">Agregar</button> 
+                
+            </td>
+        </tr>
+        </table>
+        </form>
+        
+    </main>
+    
 </body>
 </html>

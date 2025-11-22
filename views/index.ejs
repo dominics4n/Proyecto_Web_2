@@ -20,8 +20,8 @@
             <td><%= user.name %></td>
             <td><%= user.email %></td>
             <td>
-                <a href="/edit/<%= user.id %>">Editar</a>
-                <a href="/delete/<%= user.id %>">Eliminar</a>
+                <a href="/edit?id=<%= user.id %>">Editar</a>
+                <a href="/delete?id=<%= user.id %>">Eliminar</a>
             </td>
         </tr>
         <% }); %>

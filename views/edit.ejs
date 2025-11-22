@@ -6,15 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Editar</h1>
+    <h1>Editar Usuario</h1>
     <!-- agregar usuario -->
-     <form action="/update" method="post">
+     <% users.forEach(user =>{ %>
+     <form action="/update" method="get">
+            <input type="text" id="id" name="id" value="<%= user.id %>" hidden>
+            <br>
             <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" value="<%= user.name %>" required>
             <br>
             <label for="email">Correo</label>
-                <input type="email" name="email" id="email" required>
-            <button type="submit">Agregar</button> 
+                <input type="email" name="email" id="email" value="<%= user.email %>" required>
+            
+            <table>
+            <tr>
+                <td><button type="submit">Actualizar</button></td>
+                <td><a href="/">Cancelar</a></td>
+            </tr>
+            </table>
      </form>
+     <% }); %>
 </body>
 </html>

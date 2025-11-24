@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="bsod container">
+        <h1 class="neg title"><span class="bg">Añadir Usuario</span></h1>
+
+        <!-- agregar usuario -->
+        <form action="/add" method="post">
+            <table style="border: none; width: 60%;">
+            <tr>
+                <td style="border: none; padding: 0px;">
+                    <label for="name">Nombre:</label>
+                    <div style="text-align: center;">
+                        <input style="width: 100%;" type="text" id="name" name="name" required>
+                    </div>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td style="border: none; padding: 0px;">
+                    <label for="email">Correo:</label>
+                    <div style="text-align: center;">
+                        <input style="width: 100%;" type="email" name="email" id="email" required>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                
+                <td style="border: none; padding: 0px;">
+                    <br>
+                    <button type="submit">Añadir</button>
+                    <a class="linkcool" href="/">Cancelar</a>
+                </td>
+            </tr>
+            </table>
+        </form>
+    </main>
+</body>
+</html>

@@ -3,6 +3,11 @@ const path = require('path');
 const router = express.Router();
 const db = require('../bd');
 
+router.get("/NuevoUsuario", (req, res)=>{
+    res.render('add');
+    }
+);
+
 router.get("/edit", (req, res)=>{
     const consulta = 'SELECT * FROM users WHERE id ="'+req.query.id+'"';
     db.query(consulta,(err,results)=>{
